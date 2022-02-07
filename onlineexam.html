@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Online Exam</title>
+        <script>
+            function btn(){
+                var score=0;
+                if(document.getElementById("A1").checked){
+                    score=score+1;
+                }
+                if(document.getElementById("B1").checked){
+                    score=score+1;
+                }
+                if(document.getElementById("C1").checked){
+                    score=score+1;
+                }
+                if(document.getElementById("D1").checked){
+                    score=score+1;
+                }
+                if(document.getElementById("E1").checked){
+                    score=score+1;
+                }
+              document.getElementById("res").innerHTML=score;
+            }
+        </script>
+    </head>
+    <body>
+        <form alignment="left">
+            <div>
+                <p>1.What is 21/3</p>
+                <p>A,<input type="radio" name="what is 21/3" value="4">4</p>
+                <p>B.<input type="radio" name="what is 21/3" value="8">8</p>
+                <p>C.<input type="radio" name="what is 21/3" value="5">5</p>
+                <p>D.<input type="radio" name="what is 21/3" value="7" id="A1">7</p>
+            </div>
+            <div>
+                <p>2.What is 12/2</p>
+                <p>A.<input type="radio" name="what is 12/2" value="6" id="B1">6</p>
+                <p>B.<input type="radio" name="what is 12/2" value="8">8</p>
+                <p>C.<input type="radio" name="what is 12/2" value="5">5</p>
+                <p>D.<input type="radio" name="what is 12/2" value="9">9</p>
+            </div>
+            <div>
+                <p>3.What is 30*4</p>
+                <p>A.<input type="radio" name="what is 30*4" value="112">112</p>
+                <p>B.<input type="radio" name="what is 30*4" value="118">118</p>
+                <p>C.<input type="radio" name="what is 30*4" value="120" id="C1">120</p>
+                <p>D.<input type="radio" name="what is 30*4" value="7" id="A1">7</p>
+            </div>
+            <div>
+                <p>4.What is 25*25</p>
+                <p>A.<input type="radio" name="what is 25*25" value="635">635</p>
+                <p>B.<input type="radio" name="what is 25*25" value="625" id="D1">625</p>
+                <p>C.<input type="radio" name="what is 25*25" value="615">615</p>
+                <p>D.<input type="radio" name="what is 25*25" value="645">645</p>
+            </div>
+            <div>
+                <p>5.What is 10-5</p>
+                <p>A.<input type="radio" name="what is 10-5" value="3">3</p>
+                <p>B.<input type="radio" name="what is 10-5" value="4">4</p>
+                <p>C.<input type="radio" name="what is 10-5" value="6">6</p>
+                <p>D.<input type="radio" name="what is 10-5" value="5" id="E1">5</p>
+            </div>
+           
+        </form>
+        <button onclick="btn()" name="submit">SUBMIT</button>
+        <p id="res"></p>
+    </body>
+</html>
