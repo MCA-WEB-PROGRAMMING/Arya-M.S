@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Mouse Hover</title>
+        <script>
+            function setnewimage(image)
+            {
+                image.src="C:\Users\Administrator\Pictures\Saved Pictures\2CAA.PNG";
+            }
+            function setoldimage(image)
+            {
+                image.src="C:\Users\Administrator\Pictures\Saved Pictures\38127 (2).jpg";
+            }
+            function changetext()
+            {
+                document.getElementById("heading").innerHTML="hover mouse over..."
+            }
+            function backtotext()
+            {
+                document.getElementById("heading").innerHTML="hai hello world..."
+            }
+        </script>
+    </head>
+    <body>
+        <img src="C:\Users\Administrator\Pictures\Saved Pictures\38127 (2).jpg" name="image1" onmouseover="setnewimage(this)" onmouseout="setoldimage(this)" height="450" width="450">
+        <div id="text">
+            <h1 id="heading" onmouseover="changetext()" onmouseout="backtotext()">Hello there...</h1>
+        </div>
+    </body>
+</html>
