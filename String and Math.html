@@ -1,0 +1,260 @@
+<html>
+<head>
+	<script>
+function string()
+{
+	var s=document.getElementById('str').value;
+	fst=s.charAt(0);
+	document.getElementById('first').value=fst;
+	lc=s.toLowerCase();
+	document.getElementById('lower').value=lc;
+	uc=s.toUpperCase();
+	document.getElementById('upper').value=uc;
+	rv=s.split('').reverse('').join('')
+	document.getElementById('revers').value=rv;
+}
+
+
+function cont(){
+var s=document.getElementById('str').value;
+var m=document.getElementById('con').value;
+conct=s.concat(m)
+document.getElementById('concat').value=conct;
+}
+
+
+function replace(){
+	var s=document.getElementById('str').value;
+var s1=document.getElementById('rep').value;
+var s2=document.getElementById('new').value;
+ns=s.replace(s1,s2)
+document.getElementById('news').value=ns;
+}
+
+
+function index1(){
+	var s=document.getElementById('str').value;
+var r=document.getElementById('ind').value;
+inde=s.indexOf(r);
+document.getElementById('indi').value=inde;
+}
+ function slice()
+            {
+                var s=document.getElementById('str').value;
+                var s2=document.getElementById('start').value;
+                sl=s.slice(s2);
+                document.getElementById('sl').value=sl;
+            }
+ function substr()
+            {
+                var s=document.getElementById('str').value;
+                var s4=document.getElementById('startt').value;
+                var s5=document.getElementById('endd').value;
+                s0=s.substr(s4,s5);
+                document.getElementById('s6').value=s0;
+            }
+           
+</script>
+	</head>
+	<body bgcolor="pink">
+     <center>   <h1>String function</h1></center>
+     <center>
+<table>
+	<tr>
+		<td><label>Enter the string</label></td>
+		<td><input type="text" id="str"></td>
+		<td><button onclick="string()">OK</button></td>
+
+	</tr>
+	<tr>
+<td><label>Element at first position</label></td>
+		<td><input type="text" id="first"></td>
+	</tr>
+	<tr>
+<td><label>	To lower case</label></td>
+		<td><input type="text" id="lower"></td>
+	</tr>
+	<tr>
+<td><label>Toupper case</label></td>
+		<td><input type="text" id="upper"></td>
+	</tr>
+	<tr>
+<td><label>Reverse</label></td>
+		<td><input type="text" id="revers"></td>
+	</tr>
+	<tr>
+		<td><label>Enter string to concat</label></td>
+		<td><input type="text" id="con"></td>
+		<td><button onclick="cont()">ok</button></td>
+		<td><input type="text" id="concat"></td>
+	</tr>
+	<tr>
+		<td><label>Enter string to be replaced</label></td>
+		<td><input type="text" id="rep"></td>
+	</tr>
+	<tr>
+		<td><label>Enter new string</label></td>
+		<td><input type="text" id="new"></td>
+
+		<td><button onclick="replace()">ok</button></td>
+	</tr>
+	<tr>
+		<td><label>New string</label></td>
+		<td><input type="text" id="news"></tr>
+	</tr>
+	<tr>
+		<td><label>index</label></td>
+		<td><input type="text" id="ind">
+			<td><button onclick="index1()">ok</button></td>
+			<td><input type="text" id="indi">
+	</tr>
+	  <tr>
+	  	<td><label>Enter starting index to Slice</label></td>
+               
+                <td>
+                    <input type="number" id='start'>
+                </td>
+                <td><button onclick="slice()">ok</button></td>
+                <td>
+                    <input type="text" id='sl'>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Enter starting index to substring</label></td>
+                     
+                      <td>
+                          <input type="number" id='startt'>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <label>Enter ending index to Substring</label></td>
+                       <td>   <input type="number" id='endd'>
+                      </td>
+                      <td><button onclick="substr()">ok</button></td>
+                      <td>
+                          <input type="text" id='s6'>
+                      </td>
+                  </tr>
+            
+</table>
+</center>
+
+
+	</body>
+</html>
+<html>
+<head>
+	<script>
+	function number(){
+		n=document.getElementById('num').value;
+		pw=Math.pow(n,2);
+		document.getElementById('sq').value=pw;
+        nex=Math.ceil(n);
+		document.getElementById('next').value=nex;
+		bef=Math.floor(n);
+		document.getElementById('before').value=bef;
+		s1=Math.round(n);
+		document.getElementById('roundd').value=s1;
+		s2=Math.trunc(n);
+		document.getElementById('part').value=s2;
+		s3=Math.random(n)
+		document.getElementById('rand').value=s3;
+		s4=Math.abs(pw);
+		document.getElementById('ab').value=s4;
+		 si=Math.sign(n);
+                if(si==1)
+                {
+                    document.getElementById('sign').value="Positive";
+                }
+                else if(si==0)
+                {
+                    document.getElementById('sign').value="Zero";
+                }
+                else
+                {
+                    document.getElementById('sign').value="Negative";
+                }  
+            }
+            function maxmin()
+            {
+            a=document.getElementById('num1').value;
+            b=document.getElementById('num2').value;
+            c=document.getElementById('num3').value;
+            d=Math.max(a,b,c);
+            e=Math.min(a,b,c);
+            document.getElementById('large').value=d;
+            document.getElementById('small').value=e;
+            }
+</script>
+</head>
+<body>
+    <center>   <h1>Math function</h1></center>
+	<center>
+        <table>
+        
+		    <tr>
+			<td><label>Enter a number</label></td>
+			<td><input type="number" id="num"></td>
+			<td><button onclick="number()">OK</button></td>
+		</tr>
+			<tr>
+				<td>Square of a number</td>
+				<td><input type="number" id='sq'></td>
+			</tr>
+			<tr>
+				<td>Next integer</td>
+				<td><input type="number" id='next'></td>
+			</tr>
+			<tr>
+				<td>Integer just before the given number</td>
+				<td><input type="number" id='before'></td>
+			</tr>
+			<tr>
+				<td>Round value</td>
+				<td><input type="number" id='roundd'></td>
+			</tr>
+            <tr>
+				<td>Integer part of a number</td>
+				<td><input type="number" id='part'></td>
+			</tr>
+			            <tr>
+				<td>Random value</td>
+				<td><input type="number" id='rand'></td>
+			</tr>
+			            <tr>
+				<td>Absolute value of square</td>
+				<td><input type="number" id='ab'></td>
+			</tr>
+			          <tr>
+				<td>sign of a given number</td>
+				<td><input type="text" id='sign'></td>
+			</tr>
+			  
+          <tr>
+				<td>Enter number1</td>
+				<td><input type="number" id='num1'></td>
+			</tr>
+			            <tr>
+				<td>Enter number2</td>
+				<td><input type="number" id='num2'></td>
+			</tr>
+			        <tr>
+				<td>Enter number3</td>
+				<td><input type="number" id='num3'></td>
+				<td><button onclick="maxmin()">OK</button></td>
+			</tr>
+			<tr>
+				<td><label>Largest of 3 numbers</label></td>
+			<td><input type="number()" id='large'></td>
+		</tr>
+          <tr>
+            <td><label>Smallest of 3 numbers</label></td>
+			<td><input type="number()" id='small'></td>
+		</tr>
+
+    
+		</table>
+    </center>
+</body>
+</html>
