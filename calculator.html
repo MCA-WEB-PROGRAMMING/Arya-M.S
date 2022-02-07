@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>calculator</title>
+        <script>
+            function add()
+            {
+                var a=document.getElementById('num1').value;
+                var b=document.getElementById('num2').value;
+                sum=a+b;
+                document.write("sum="+sum);
+            }
+            function substract()
+            {
+                var a=document.getElementById('num1').value;
+                var b=document.getElementById('num2').value;
+                sub=a-b;
+                document.write("Difference="+sub);
+            }
+            function multiply()
+            {
+                var a=document.getElementById('num1').value;
+                var b=document.getElementById('num2').value;
+                prd=a*b;
+                document.write("Product="+prd);
+            }
+            function divition()
+            {
+                var a=document.getElementById('num1').value;
+                var b=document.getElementById('num2').value;
+                div=a/b;
+                document.write("Quotient="+div);
+            }
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <label for="">Enter first number :</label>
+            <br>
+            <input type="number" id="num1">
+            <br>
+            <label for="">Enter second number :</label>
+            <br>
+            <input type="number" id="num2">
+            <br>
+            <table>
+                <tr>
+                    <td><button onclick="add()">Add</button></td>
+                    <td><button onclick="substract()">Substract</button></td>
+                    <td><button onclick="multiply()">Multiply</button></td>
+                    <td><button onclick="divition()">Divide</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

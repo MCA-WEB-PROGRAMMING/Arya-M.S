@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Form validation</title>
+        <script>
+            function validate(){
+               var passwordd=document.getElementById('password').value ;
+               var usernamee=document.getElementById('username').value;
+               var phonee=document.getElementById('phn').value;
+               if(usernamee=="")
+               {
+                   alert("Fill the Username");
+               }
+               else if(usernamee.length<8)
+               {
+                   alert("Enter username with more than 8 characters");
+               }
+               if(phonee=="")
+               {
+                   alert("Fill the Phone number");
+               }
+               else if(phonee.length<10)
+               {
+                   alert("Enter valid phone number");
+               }
+               if(passwordd=="")
+               {
+                   alert("fill password");
+               }
+               else if(passwordd.length<6)
+               {
+                   alert("enter a valid password");
+               }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        <center>  
+        <table>
+        <tr>
+            <td>username</td>
+            <td><input type="text" id="username" placeholder="username"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" id="password" placeholder="password"></td>
+        </tr>
+        <tr>
+            <td>Phone number</td>
+            <td><input type="text" id="phn"></td>
+        </tr>
+        <tr>
+            <td><button onclick="validate()">SUBMIT</td>
+        </tr>
+        </table>
+        </center>
+        </form>
+    </body>
+</html>
