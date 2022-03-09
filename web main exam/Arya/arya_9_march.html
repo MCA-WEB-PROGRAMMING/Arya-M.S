@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>REGISTRATION FORM</title>
+        <style>
+            body{background:rgb(240, 207, 227);
+            }
+        </style>
+    </head>
+
+    <body >
+        <h1 align="center">REGISTRATION FORM</h1>
+        <form>
+            <table>
+                <tr>
+                    <td >
+                    <label > Name:</label>
+                    </td>
+                    <td>
+                    <input type="text" autofocus required></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label > Age:</label></td>
+                    <td>
+                    <input type="number"></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label > Date of Birth</label></td><br>
+                    <td>
+                    <input type="date" ></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label >Address</label></td><br>
+                    <td>
+                    <textarea placeholder=" ADDRESS" rows="4"></textarea>  </td>
+                </tr>
+                <tr>
+                    <td >
+                        <label > Sex</label></td>
+                    <td>
+                        <input type="radio" ><label > Female</label></td>
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="radio" ><label >Male</label></td>
+                    </td>   
+                </tr>
+                <tr>
+                    <td >
+                    <label >Nationality</label></td><br>
+                    <td>
+                    <input type="text" ></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label >email</label></td><br>
+                    <td>
+                    <input type="text" id="em" ></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label >Username</label></td><br>
+                    <td>
+                    <input type="text"  id="usr" placeholder="USER NAME" ></td>
+                </tr>
+                <tr>
+                    <td >
+                    <label >Phone</label></td><br>
+                    <td>
+                    <input type="number"  id="phn" placeholder="PHONE NUMBER"></td>
+                </tr>
+                <tr>
+                    <td>
+                    <label >Enter your Password</label></td><br>
+                    <td>
+                    <input type="password" id="pwd" placeholder="PASSWORD"></td>
+                </tr>   
+                <tr>
+                    <td ></td>
+                    <td>
+                    <input type="reset" ></td>
+                    <td>
+                    <input type="button" onclick="validate()" value="SUBMIT"></td>
+                </tr>
+
+            </table>
+        </form>
+        <script>
+            function validate(){
+                let x=document.getElementById("usr").value;
+                let y=document.getElementById("pwd").value;
+                let z=document.getElementById("phn").value;
+                let a=document.getElementById("em").value;
+
+                if(x=="" || x.length<6 || x.length>15){
+                    alert("Enter the valid username");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+
+
+                if(y==" "){
+                    alert("Enter the valid password");
+                    return false;
+                }
+                else if(y.length<6){
+                    alert("Weak password");
+                    return false;
+                }
+                else if(y.length>15){
+                    alert("Long password");
+                    return false;
+                }
+                else{
+                    alert("Confirm Password");
+                    return false;
+                }
+ 
+
+                if(z=="" || z.length<10 || z.length>10){
+                    alert("Enter a valid phoneNumber");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+
+
+                if(a=="" || a.length<6 || a.length>20){
+                    alert("Enter a valid email");
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+
+        </script>
+    </body>
+</html>
